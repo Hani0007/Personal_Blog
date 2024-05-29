@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>BlogSpot</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="/static/img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="/static/css/style.css" rel="stylesheet">
+    </head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-text d-flex flex-column h-100 justify-content-center text-center">
+                <img class="mx-auto d-block w-75 bg-primary img-fluid rounded-circle mb-4 p-3" src="/static/img/profile2.jpg" alt="Image">
+                <h1 class="font-weight-bold">Abdul Hanan</h1>
+                <p class="mb-4">
+                    Hi! I'm Abdul Hanan, a passionate blogger and digital enthusiast.
+                </p>
+                <!-- <div class="d-flex justify-content-center mb-5">
+                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-instagram"></i></a>
+                </div> -->
+                <a href="" class="btn btn-md btn-block btn-primary mt-1">Hire Me</a>
+            </div>
+            <div class="sidebar-icon d-flex flex-column h-100 justify-content-center text-right">
+                <i class="fas fa-2x fa-angle-double-right text-primary"></i>
+            </div>
+        </div>
+    
+        <div class="content">
+            <!-- Navbar Start -->
+            <div class="container p-0">
+                <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
+                    <a href="" class="navbar-brand d-block d-lg-none">Navigation</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav m-auto">
+                            <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
+
+
+                            <a href = "{% url 'about' %}" class="nav-item nav-link">About</a>
+                            
+                            <a href = "{% url 'blog' %}" class="nav-item nav-link">Blogs</a>
+                                
+                            
+                            <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- Navbar End -->
+
+            <!-- Page Header Start -->
+            <div class="container py-5 px-2 bg-primary">
+                <div class="row py-5 px-4">
+                    <div class="col-sm-6 text-center text-md-left">
+                        <h1 class="mb-3 mb-md-0 text-white text-uppercase font-weight-bold">Blog Detail</h1>
+                    </div>
+                    <div class="col-sm-6 text-center text-md-right">
+                        <div class="d-inline-flex pt-2">
+                            <h4 class="m-0 text-white"><a class="text-white" href="">Home</a></h4>
+                            <h4 class="m-0 text-white px-2">/</h4>
+                            <h4 class="m-0 text-white">Blog Detail</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+
+            <!-- Blog Detail Start -->
+            <!-- Blog List Start -->
+<div class="container bg-white pt-5">
+    {% for blog in blogs %}
+    <div class="row blog-item px-3 pb-5">
+        <div class="col-md-5">
+            <!-- <img class="img-fluid mb-4 mb-md-0" src="{{ blog.image.url }}" alt="Image"> -->
+        </div>
+        <div class="col-md-7">
+            <h3 class="mt-md-4 px-md-3 mb-2 py-2 bg-white font-weight-bold">{{ blog.title }}</h3>
+            <div class="d-flex mb-3">
+                <small class="mr-2 text-muted"><i class="fa fa-calendar-alt"></i> {{ blog.date_published }}</small>
+            </div>
+            <p>
+                {{ blog.content }}
+            </p>
+            
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- Blog List End -->
+            <!-- Blog Detail End -->
+                
+            <!-- Footer Start -->
+            <div class="container py-4 bg-secondary text-center">
+                <p class="m-0 text-white">
+                    &copy; <a class="text-white font-weight-bold" href="#">Blog Spot</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">Mr Tech</a>
+                </p>
+            </div>
+            
+            <!-- Footer End -->
+        </div>
+    </div>
+        
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/lib/easing/easing.min.js"></script>
+    <script src="/static/lib/waypoints/waypoints.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="/static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="/static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
