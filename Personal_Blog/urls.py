@@ -11,4 +11,5 @@ urlpatterns = [
     path('blog/', views.blog , name ="blog"),
     path('contact/', views.contact , name ="contact"),
     path('single/', views.single , name ="single"),
+    path('search/', views.search, name='search'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
