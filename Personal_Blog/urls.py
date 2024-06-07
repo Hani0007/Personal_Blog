@@ -11,5 +11,4 @@ urlpatterns = [
     path('blog/', views.blog , name ="blog"),
     path('contact/', views.contact , name ="contact"),
     path('single/', views.single , name ="single"),
-    # Add the following line to serve media files during development
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -14,7 +14,7 @@ def blog(request):
 def contact(request):
     return render(request, 'contact.html')
 def single(request):
-    #  Retrieve all blog posts from the database
+   
  blogs = Blog.objects.all()
  return render(request, 'single.html', {'blogs': blogs})
 
