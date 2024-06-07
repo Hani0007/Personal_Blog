@@ -29,12 +29,7 @@
                 <p class="mb-4">
                     Hi! I'm Abdul Hanan, a passionate blogger and digital enthusiast.
                 </p>
-                <!-- <div class="d-flex justify-content-center mb-5">
-                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-instagram"></i></a>
-                </div> -->
+                
                 <a href="" class="btn btn-md btn-block btn-primary mt-1">Hire Me</a>
             </div>
             <div class="sidebar-icon d-flex flex-column h-100 justify-content-center text-right">
@@ -85,12 +80,12 @@
             <!-- Page Header End -->
 
             <!-- Blog Detail Start -->
-            <!-- Blog List Start -->
+         
 <div class="container bg-white pt-5">
     {% for blog in blogs %}
     <div class="row blog-item px-3 pb-5">
         <div class="col-md-5">
-            <!-- <img class="img-fluid mb-4 mb-md-0" src="{{ blog.image.url }}" alt="Image"> -->
+            <img class="img-fluid mb-4 mb-md-0" src="{{ blog.image.url }}" alt="Image">
         </div>
         <div class="col-md-7">
             <h3 class="mt-md-4 px-md-3 mb-2 py-2 bg-white font-weight-bold">{{ blog.title }}</h3>

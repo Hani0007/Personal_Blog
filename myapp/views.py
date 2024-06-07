@@ -8,7 +8,6 @@ def index(request):
 def about(request):
     return render(request,'about.html')
 def blog(request):
-    #  Retrieve all blog posts from the database
  blogs = Blog.objects.all()
  return render(request, 'blog.html', {'blogs': blogs})
   
