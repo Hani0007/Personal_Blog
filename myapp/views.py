@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from myapp.models import Blog
-from myapp.forms import SearchForm
+
+
+
 
 def index(request):
     blogs = Blog.objects.all()
